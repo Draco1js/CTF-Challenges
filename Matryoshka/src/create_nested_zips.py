@@ -183,7 +183,7 @@ def create_nested_zips(num_levels, output_dir, base_image, flag_image, passwords
     # Create the end message text file for the innermost level
     end_message_path = os.path.join(output_dir, "message.txt")
     with open(end_message_path, 'w') as f:
-        f.write("You reached the end... was it worth it? Did you miss something along the way?")
+        f.write("You reached the end... still no flag? Did you know 14 is an unlucky number in russian culture? And you just hit the 14th level...")
     
     # Create zips from innermost to outermost
     current_content = end_message_path

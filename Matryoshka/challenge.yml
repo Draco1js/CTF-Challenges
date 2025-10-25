@@ -3,14 +3,14 @@ author: Aayan Sultan
 category: Forensics
 description: |-
   
-  Hint: rockyou might help you... but is that really the solution?
+  Have fun :)
 
 
-value: 500 
+value: 370 
 type: dynamic
 
 extra:
-  initial: 500
+  initial: 370
   decay: 15
   minimum: 100
 

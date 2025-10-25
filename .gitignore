@@ -1,1 +1,32 @@
-/.DS_Store
+# Password lists
+rockyou.txt
+rockyou.txt.gz
+
+# Generated challenge files
+# nested_zips/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
