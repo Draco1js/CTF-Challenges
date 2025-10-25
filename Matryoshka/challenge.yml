@@ -1,0 +1,28 @@
+name: "Matryoshka"
+author: Aayan Sultan
+category: Forensics
+description: |-
+  
+  Hint: rockyou might help you... but is that really the solution?
+
+
+value: 500 
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 100
+
+flags:
+  - {
+      type: "static",
+      content: "flag{nesting_dolls_NAskynRbFY}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/image.jpeg
+
+state: visible
+version: "0.1"

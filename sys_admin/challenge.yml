@@ -1,0 +1,28 @@
+name: "sys_admin"
+author: Aayan Sultan
+category: Forensics
+description: |-
+  
+  Someone tried to attack our site. Can you catch his request? Flag format: flag{IP:Timestamp} Timestamp in the format [DD/MMM/YYYY:HH:MM:SS +XXXX]
+
+
+value: 250 
+type: dynamic #This dynamic means the points go down 
+
+extra:
+  initial: 250
+  decay: 15
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "flag{135.90.188.169:[20/May/2025:05:30:05 +0500]}",
+      data: "case_insensitive"
+  }
+
+files:
+  - dist/access_logs_12-4-25_03_10_25.log
+
+state: visible
+version: "0.1"
