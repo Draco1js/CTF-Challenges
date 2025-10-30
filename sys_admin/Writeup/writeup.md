@@ -1,4 +1,4 @@
-# Forensics Challenge: Log Analysis Writeup
+# EASY - sys_admin writeup
 
 ## Challenge Description
 Someone tried to exploit the server through a web attack. We need to analyze access logs to find the malicious request and identify the attacker.

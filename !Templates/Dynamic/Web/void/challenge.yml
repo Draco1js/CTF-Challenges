@@ -1,0 +1,38 @@
+name: "<void>"
+author: <rzx>
+category: <web>
+description: |-
+  
+  <this probably needs some help>
+
+
+value: 500 
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 100
+
+flags:
+  - {
+      type: "dynamic",
+      content: "<CSL{pl4y1ng_w1th_k1ds_1n_jwt_>",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/<index.js>
+  - dist/public/<login.html>
+  - dist/keys/<1.key>
+  - dist/keys/<2.key>
+  - dist/keys/<3.key>
+  - dist/keys/<4.key>
+  - dist/keys/<5.key>
+  - dist/keys/<7.key>
+  - dist/keys/<null.key>
+  - dist/keys/dev/<null.key>
+  - dist/dev/<null.key>
+  
+state: visible
+version: "0.1"

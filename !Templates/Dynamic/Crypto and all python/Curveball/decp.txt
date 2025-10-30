@@ -1,0 +1,5 @@
+Title: CurveBall
+
+Desc: We’ve heard that ECDSA is a strong algorithm. We've implemented it to secure our data, but still our data is hacked. You give try to our our secure algorithm and try to identify the issue.
+
+CSL{El1pt1c_curv3_1$_g00d_}

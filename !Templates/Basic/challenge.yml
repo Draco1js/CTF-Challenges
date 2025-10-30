@@ -1,0 +1,28 @@
+name: "<Name of the challenge>"
+author: <discord_username>
+category: <category>
+description: |-
+  
+  <Add description here>
+
+
+value: 500 
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 100
+
+flags:
+  - {
+      type: "static",
+      content: "<flag>",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/<file to upload>
+
+state: visible
+version: "0.1"

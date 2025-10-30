@@ -6,11 +6,11 @@ description: |-
   Someone tried to attack our site. Can you catch his request? Flag format: flag{IP:Timestamp} Timestamp in the format [DD/MMM/YYYY:HH:MM:SS +XXXX]
 
 
-value: 250 
+value: 150 
 type: dynamic #This dynamic means the points go down 
 
 extra:
-  initial: 250
+  initial: 150
   decay: 15
   minimum: 50
 
