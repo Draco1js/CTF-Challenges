@@ -1,0 +1,24 @@
+{
+  "name": "dist",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "1.4.10",
+    "@types/express": "5.0.5",
+    "@types/jsonwebtoken": "9.0.10"
+  },
+  "peerDependencies": {
+    "typescript": "5"
+  },
+  "dependencies": {
+    "cookie-parser": "1.4.7",
+    "dotenv": "17.2.3",
+    "express": "5.1.0",
+    "jsonwebtoken": "9.0.2",
+    "tsx": "4.20.6"
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Accounting Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .maintenance-icon {
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #1e3c72;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="maintenance-icon">🔧</div>
+        <h1>Under Maintenance</h1>
+        <p>This admin panel is currently under maintenance. Please come back again later.</p>
+        <a href="/dev-panel" class="btn">Back to Login</a>
+    </div>
+    
+    <script>
+        // Verify token with server
+        async function verifyAuth() {
+            const userType = localStorage.getItem('userType');
+            
+            if (userType !== 'admin') {
+                window.location.href = '/dev-panel';
+                return;
+            }
+            
+            try {
+                // Cookies are sent automatically by browser
+                const response = await fetch('/api/admin/me', {
+                    credentials: 'include' // Important: include cookies in request
+                });
+                
+                if (!response.ok) {
+                    // Token is invalid or expired
+                    localStorage.removeItem('userType');
+                    window.location.href = '/dev-panel';
+                    return;
+                }
+                
+                // Token is valid, user can stay on the page
+            } catch (error) {
+                // Network error or invalid token
+                localStorage.removeItem('userType');
+                window.location.href = '/dev-panel';
+            }
+        }
+        
+        verifyAuth();
+    </script>
+</body>
+</html>
+

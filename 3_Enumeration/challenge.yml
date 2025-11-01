@@ -1,0 +1,28 @@
+name: "<theseriouslization>"
+author: <rzx>
+category: <web>
+description: |-
+  
+  <challenge very easy no need for hints>
+
+
+value: 500 
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 100
+
+flags:
+  - {
+      type: "dynamic",
+      content: "<CSL{4ut0mat10n_i5_e45y_>",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/<index.php>
+
+state: visible
+version: "0.1"
