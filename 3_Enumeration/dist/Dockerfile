@@ -4,6 +4,7 @@ FROM node:alpine
 ENV CHAL_NAME=Enumeration
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV FLAG=flag{A3GFCwlH8xwG}
 
 # Set working directory
 WORKDIR /app
@@ -18,13 +19,17 @@ RUN npm install
 COPY tsconfig.json ./
 COPY src/ ./src/
 COPY public/ ./public/
+COPY .env ./env
 
-# Copy the entrypoint script and set permissions
-COPY docker-entrypoint.sh /tmp/docker-entrypoint.sh
-RUN chmod +x /tmp/docker-entrypoint.sh
+# # Copy the entrypoint script and set permissions
+# COPY docker-entrypoint.sh /tmp/docker-entrypoint.sh
+# RUN chmod +x /tmp/docker-entrypoint.sh
 
 # Expose port 3000
 EXPOSE 3000
 
+CMD ["npm", "start"]
+
+
 # Set the entrypoint
-ENTRYPOINT [ "/tmp/docker-entrypoint.sh" ]
+# ENTRYPOINT [ "/tmp/docker-entrypoint.sh" ]
