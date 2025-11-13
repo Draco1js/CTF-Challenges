@@ -21,8 +21,5 @@ flags:
       data: "case_sensitive"
   }
 
-files:
-  - dist/<index.php>
-
 state: visible
 version: "0.1"
